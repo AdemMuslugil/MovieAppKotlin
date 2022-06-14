@@ -1,5 +1,6 @@
 package com.adem.movieappkotlin.service
 
+import com.adem.movieappkotlin.Util.API_KEY
 import com.adem.movieappkotlin.model.MovieModel
 import io.reactivex.Single
 import retrofit2.Retrofit
@@ -20,7 +21,7 @@ class MovieAPIService {
 
 
     fun getData(page : String) : Single<MovieModel>{
-        return api.getMovie(page)
+        return api.getMovie(page, API_KEY)
     }
 
 }
