@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+          android:background="#0E185F">
+
+
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/MovieList"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              app:layout_constraintBottom_toTopOf="@+id/cardView3"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="1.0"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <ProgressBar
+              android:id="@+id/progressBar"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              app:layout_constraintBottom_toBottomOf="@+id/MovieList"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="@+id/MovieList" />
+
+
+          <TextView
+              android:id="@+id/errorTextView"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Error! Try Again"
+              android:textColor="@color/black"
+              android:textSize="20sp"
+              android:textStyle="bold"
+              app:layout_constraintBottom_toBottomOf="@+id/MovieList"
+              app:layout_constraintEnd_toEndOf="@+id/MovieList"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="@+id/MovieList" />
+
+
+          <androidx.cardview.widget.CardView
+              android:id="@+id/cardView3"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent">
+
+              <LinearLayout
+                  android:id="@+id/linearLayout"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="bottom"
+                  android:orientation="horizontal">
+
+
+                  <Button
+                      android:id="@+id/backButton"
+                      android:layout_width="wrap_content"
+                      android:layout_height="match_parent"
+                      android:layout_gravity="center"
+                      android:layout_weight="1"
+                      android:backgroundTint="#FFFFFF"
+                      android:text="back"
+                      android:textColor="@color/black" />
+
+                  <EditText
+                      android:id="@+id/pageText"
+                      android:layout_width="wrap_content"
+                      android:layout_height="match_parent"
+                      android:layout_gravity="center"
+                      android:layout_weight="1"
+                      android:background="#FFFFFF"
+                      android:editable="false"
+                      android:gravity="center"
+                      android:text="1"
+                      android:textColor="@color/black"
+                      tools:ignore="Deprecated" />
+
+                  <Button
+                      android:id="@+id/nextButton"
+                      android:layout_width="wrap_content"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:backgroundTint="#FFFFFF"
+                      android:text="next"
+                      android:textColor="@color/black" />
+
+              </LinearLayout>
+          </androidx.cardview.widget.CardView>
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</layout>
